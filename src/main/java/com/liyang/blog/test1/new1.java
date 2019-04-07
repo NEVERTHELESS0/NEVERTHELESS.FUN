@@ -24,5 +24,6 @@ public class new1 {
         MenuMapper menuMapper = act.getBean(MenuMapper.class);
         List<Menu> menu = menuMapper.listMenu();
         System.out.println(menu);
+        //
     }
 }
