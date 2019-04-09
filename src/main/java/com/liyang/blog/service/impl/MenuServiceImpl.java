@@ -1,7 +1,10 @@
 package com.liyang.blog.service.impl;
 
 import com.liyang.blog.entity.Menu;
+import com.liyang.blog.mapper.MenuMapper;
 import com.liyang.blog.service.MenuService;
+import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,28 +18,17 @@ import java.util.List;
 
 @Service("menuService")
 public class MenuServiceImpl implements MenuService {
+
+    @Autowired
+    private MenuMapper menuMapper;
+
     @Override
     public List<Menu> listMenu() {
-        return null;
+        List<Menu> menuList = menuMapper.listMenu();
+        return menuList;
     }
-
-    @Override
-    public Menu insertMenu(Menu menu) {
-        return null;
-    }
-
-    @Override
-    public void deleteMenu(Integer id) {
-
-    }
-
-    @Override
-    public void updateMenu(Menu menu) {
-
-    }
-
-    @Override
-    public Menu getMenuById(Integer id) {
-        return null;
+//    @Test
+    public void main(){
+        System.out.println(menuMapper.listMenu());
     }
 }

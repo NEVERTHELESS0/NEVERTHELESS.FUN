@@ -39,4 +39,5 @@
         <property name="basePackage" value="com.liyang.blog.mapper"/>
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
+
 </beans>
