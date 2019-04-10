@@ -27,8 +27,5 @@ public class MenuServiceImpl implements MenuService {
         List<Menu> menuList = menuMapper.listMenu();
         return menuList;
     }
-//    @Test
-    public void main(){
-        System.out.println(menuMapper.listMenu());
-    }
+
 }
