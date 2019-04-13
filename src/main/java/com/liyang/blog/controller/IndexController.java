@@ -1,12 +1,16 @@
 package com.liyang.blog.controller;
 
+import com.liyang.blog.entity.Article;
 import com.liyang.blog.entity.Menu;
+import com.liyang.blog.service.ArticleService;
 import com.liyang.blog.service.MenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.context.request.WebRequest;
 
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -22,10 +26,15 @@ public class IndexController {
     @Autowired
     private MenuService menuService;
 
+    @Autowired
+    private ArticleService articleService;
+
     @RequestMapping(value = "/")
     public String handleRequeset(Model model){
-        List<Menu> menuList =  menuService.listMenu();
-        model.addAttribute("menuList", menuList);
+        HashMap<String, Object> criteria = new HashMap<>(2);
+        List<Article> articleList =
+                articleService.pageArticle(1, 10, criteria);
+        model.addAttribute("articleList", articleList);
         return "Home/index";
     }
 }

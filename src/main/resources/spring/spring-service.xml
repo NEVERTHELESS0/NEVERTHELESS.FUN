@@ -14,5 +14,5 @@
 	http://www.springframework.org/schema/tx/spring-tx.xsd">
 
     <context:component-scan base-package="com.liyang.blog.service.impl"/>
-
+    <bean id="articleService" class="com.liyang.blog.service.impl.ArticleServiceImpl"/>
 </beans>
