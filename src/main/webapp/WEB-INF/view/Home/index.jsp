@@ -40,8 +40,6 @@
           <a class="main-nav-link" href="/shumaquan">投喂</a>
 
           <a class="main-nav-link" href="/reward">留言板</a>
-
-
         </nav>
 
         <div id="search-form-wrap">
@@ -119,6 +117,7 @@
                 </div>
             </div>
         </aside>
+
         <section id="main">
             <article id="post-jdk12" class="article article-type-post" itemscope="" itemprop="blogPost">
                 <div class="article-inner">

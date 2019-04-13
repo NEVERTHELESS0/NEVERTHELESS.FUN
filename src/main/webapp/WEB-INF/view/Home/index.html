@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>liyang</title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138214355-1"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-138214355-1');
+  </script>
+
+  <link rel="stylesheet" href="css/index.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+  <div th:replace="/Home/Public/part/header :: header"></div>
+  <div class="outer">
+    <div th:replace="/Home/Public/part/sidebar-left :: sidebar-left"></div>
+    <section id="main">
+      <div th:replace="/Home/Public/part/article :: article"></div>
+      <div th:replace="/Home/Public/part/article :: article"></div>
+      <div th:replace="/Home/Public/part/article :: article"></div>
+      <div th:replace="/Home/Public/part/article :: article"></div>
+      <div th:replace="/Home/Public/part/article :: article"></div>
+      <div th:replace="/Home/Public/part/article :: article"></div>
+      <div th:replace="/Home/Public/part/article :: article"></div>
+    </section>
+    <div th:replace="/Home/Public/part/sidebar-right :: sidebar-right"></div>
+  </div>
+  <div th:replace="/Home/Public/part/footer :: footer"></div>
+</body>
+</html>
