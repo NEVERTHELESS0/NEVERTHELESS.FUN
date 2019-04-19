@@ -31,4 +31,5 @@ public class Article implements Serializable {
     private Date articleCreateTime;
 
     private Date articleUpdateTime;
+
 }

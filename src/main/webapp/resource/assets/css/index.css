@@ -2494,7 +2494,7 @@ a.article-title:hover {
 
 .site-brand-wrapper {
     position: absolute;
-    height: 650px;
+    height: 100%;
     width: 100%;
     background-size: cover;
     background-position: center 30%;

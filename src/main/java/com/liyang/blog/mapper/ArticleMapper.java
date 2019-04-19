@@ -9,4 +9,5 @@ public interface ArticleMapper {
 
     List<Article> findAll(HashMap<String, Object> criteria);
 
+    Article getArticleById(Integer articleId);
 }

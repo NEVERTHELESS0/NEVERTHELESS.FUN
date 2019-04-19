@@ -26,8 +26,15 @@ public class ArticleServiceImpl implements ArticleService {
     public List<Article> pageArticle(Integer pageIndex,
                                      Integer pageSize,
                                      HashMap<String, Object> criteria) {
-//        PageHelper.startPage(pageIndex, pageSize);
+        PageHelper.startPage(pageIndex, pageSize);
         List<Article> articleList = articleMapper.findAll(criteria);
+
         return articleList;
+    }
+
+    @Override
+    public Article getArticleById(Integer articleId) {
+        Article article = articleMapper.getArticleById(articleId);
+        return article;
     }
 }

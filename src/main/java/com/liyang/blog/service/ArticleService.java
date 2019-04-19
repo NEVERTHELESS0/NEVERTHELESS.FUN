@@ -9,4 +9,6 @@ public interface ArticleService {
     public List<Article> pageArticle(Integer pageIndex,
                                      Integer pageSize,
                                      HashMap<String, Object> criteria);
+
+    public Article getArticleById(Integer articleId);
 }

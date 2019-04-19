@@ -9,8 +9,8 @@
         <result column="article_view_count" property="articleViewCount" />
         <result column="article_comment_count" property="articleCommentCount"  />
         <result column="article_like_count" property="articleLikeCount" />
-        <result column="article_update_time" property="articleCreateTime" />
-        <result column="article_create_time" property="articleUpdateTime" />
+        <result column="article_update_time" property="articleUpdateTime" />
+        <result column="article_create_time" property="articleCreateTime" />
     </resultMap>
 
     <sql id="tb">article</sql>
@@ -23,5 +23,13 @@
     <select id="findAll" resultMap="BaseResultMap" parameterType="Integer">
       select * from
       <include refid="tb"/>
+    </select>
+
+    <select id="getArticleById" resultMap="BaseResultMap" parameterType="Integer">
+        select *  from
+        <include refid="tb"/>
+        <where>
+            and article_id = #{articleId}
+        </where>
     </select>
 </mapper>
